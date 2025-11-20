@@ -1,0 +1,204 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Story pages */
+.story {
+    padding: 20px;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.page:hover {
+    transform: translateY(-5px);
+}
+
+.page:nth-child(even) {
+    flex-direction: row-reverse;
+    background: #e3f2fd;
+}
+
+.image-placeholder {
+    flex: 1;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.emoji-image {
+    font-size: 8rem;
+    background: white;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.emoji-image:hover {
+    transform: scale(1.1);
+}
+
+.text {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.text h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.simple-text {
+    font-size: 1.4rem;
+    color: #34495e;
+    line-height: 1.6;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Vocabulary section */
+.vocabulary {
+    background: linear-gradient(45deg, #a8edea, #fed6e3);
+    padding: 30px;
+    margin: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.vocabulary h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.word-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.word {
+    background: white;
+    color: #2c3e50;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.word:hover {
+    transform: scale(1.1);
+    background: #feca57;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .page {
+        flex-direction: column !important;
+        text-align: center;
+    }
+    
+    .page:nth-child(even) {
+        flex-direction: column !important;
+    }
+    
+    .image-placeholder {
+        margin: 0 0 20px 0;
+    }
+    
+    .text {
+        padding: 0;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .text h2 {
+        font-size: 1.5rem;
+    }
+    
+    .simple-text {
+        font-size: 1.2rem;
+    }
+    
+    .emoji-image {
+        font-size: 6rem;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Animation for page load */
+.page {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
