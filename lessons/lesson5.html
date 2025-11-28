@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5: I Like Things! 💕</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        /* Lesson-specific styles */
+        .story-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .story-page {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .story-page h2 {
+            font-size: 2.5rem;
+            color: #6f42c1;
+            margin-bottom: 20px;
+        }
+        
+        .story-emoji {
+            font-size: 6rem;
+            margin: 20px 0;
+        }
+        
+        .story-text {
+            font-size: 1.8rem;
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .instruction-text {
+            font-size: 1.3rem;
+            color: #6f42c1;
+            font-style: italic;
+            background: #f3e5ff;
+            padding: 10px;
+            border-radius: 10px;
+            border-left: 4px solid #6f42c1;
+        }
+        
+        .pronunciation-word {
+            display: inline-block;
+            background: linear-gradient(45deg, #6f42c1, #8e44ad);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            margin: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        
+        .pronunciation-word:hover {
+            transform: scale(1.1);
+            background: linear-gradient(45deg, #8e44ad, #9b59b6);
+        }
+        
+        .pronunciation-word::before {
+            content: "🔊 ";
+        }
+        
+        .sentence-practice {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .vocabulary-section {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+        
+        .vocab-words {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .vocab-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .vocab-emoji {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        .vocab-word {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .home-btn {
+            display: inline-block;
+            background: #48dbfb;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 30px;
+            transition: background 0.3s ease;
+        }
+        
+        .home-btn:hover {
+            background: #17a2b8;
+        }
+    </style>
+</head>
+<body>
+    <div class="story-container">
+        <div class="story-page">
+            <h2>💕 I Like Things! - Page 1</h2>
+            <div class="story-emoji">👧</div>
+            <p class="story-text">
+                I like my mom! <span class="pronunciation-icon" onclick="pronounce('I like my mom')">🔊</span>
+            </p>
+            <p class="instruction-text">*Point to yourself, then hug yourself with love*</p>
+        </div>
+
+        <div class="story-page">
+            <h2>💕 I Like Things! - Page 2</h2>
+            <div class="story-emoji">🍦</div>
+            <p class="story-text">
+                I like to eat ice cream! <span class="pronunciation-icon" onclick="pronounce('I like to eat ice cream')">🔊</span>
+            </p>
+            <p class="instruction-text">*Pretend to lick ice cream and say "Yum!"*</p>
+        </div>
+
+        <div class="story-page">
+            <h2>💕 I Like Things! - Page 3</h2>
+            <div class="story-emoji">🐶</div>
+            <p class="story-text">
+                I like dogs! <span class="pronunciation-icon" onclick="pronounce('I like dogs')">🔊</span>
+            </p>
+            <p class="instruction-text">*Pet a pretend dog and say "Good dog!"*</p>
+        </div>
+
+        <div class="story-page">
+            <h2>💕 I Like Things! - Page 4</h2>
+            <div class="story-emoji">🎮</div>
+            <p class="story-text">
+                I like to play! <span class="pronunciation-icon" onclick="pronounce('I like to play')">🔊</span>
+            </p>
+            <p class="instruction-text">*Jump and clap your hands happily*</p>
+        </div>
+
+        <div class="sentence-practice">
+            <h3>🎯 Practice the Pattern: "I like..."</h3>
+            <p style="font-size: 1.4rem; margin: 15px 0;">
+                <strong>Try saying:</strong><br>
+                • I like apples <span class="pronunciation-icon" onclick="pronounce('I like apples')">🔊</span><br>
+                • I like books <span class="pronunciation-icon" onclick="pronounce('I like books')">🔊</span><br>
+                • I like colors <span class="pronunciation-icon" onclick="pronounce('I like colors')">🔊</span>
+            </p>
+        </div>
+
+        <div class="word-practice">
+            <h3>🔤 Practice Individual Words</h3>
+            <div class="words-grid">
+                <div class="word-item">
+                    <span class="word">I</span> <span class="pronunciation-icon" onclick="pronounce('I')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">like</span> <span class="pronunciation-icon" onclick="pronounce('like')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">my</span> <span class="pronunciation-icon" onclick="pronounce('my')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">to</span> <span class="pronunciation-icon" onclick="pronounce('to')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">mom</span> <span class="pronunciation-icon" onclick="pronounce('mom')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">eat</span> <span class="pronunciation-icon" onclick="pronounce('eat')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">ice cream</span> <span class="pronunciation-icon" onclick="pronounce('ice cream')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">dogs</span> <span class="pronunciation-icon" onclick="pronounce('dogs')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">play</span> <span class="pronunciation-icon" onclick="pronounce('play')">🔊</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="word-practice">
+            <h3>🔤 Practice Individual Words</h3>
+            <div class="words-grid">
+                <div class="word-item">
+                    <span class="word">I</span> <span class="pronunciation-icon" onclick="pronounce('I')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">like</span> <span class="pronunciation-icon" onclick="pronounce('like')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">my</span> <span class="pronunciation-icon" onclick="pronounce('my')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">to</span> <span class="pronunciation-icon" onclick="pronounce('to')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">mom</span> <span class="pronunciation-icon" onclick="pronounce('mom')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">eat</span> <span class="pronunciation-icon" onclick="pronounce('eat')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">ice cream</span> <span class="pronunciation-icon" onclick="pronounce('ice cream')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">dogs</span> <span class="pronunciation-icon" onclick="pronounce('dogs')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">play</span> <span class="pronunciation-icon" onclick="pronounce('play')">🔊</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="vocabulary-section">
+            <h3>🌟 New Words!</h3>
+            <div class="vocab-words">
+                <div class="vocab-card">
+                    <div class="vocab-emoji">💕</div>
+                    <div class="vocab-word">like</div>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-emoji">🍦</div>
+                    <div class="vocab-word">
+                        <span class="pronunciation-word" onclick="playSound('ice-cream')">ice cream</span>
+                    </div>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-emoji">🐶</div>
+                    <div class="vocab-word">
+                        <span class="pronunciation-word" onclick="playSound('dogs')">dogs</span>
+                    </div>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-emoji">🎮</div>
+                    <div class="vocab-word">
+                        <span class="pronunciation-word" onclick="playSound('play')">play</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="../index.html" class="home-btn">🏠 Back to Main Page</a>
+        </div>
+    </div>
+
+    <script src="../scripts/interactive.js"></script>
+</body>
+</html>

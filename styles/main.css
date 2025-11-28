@@ -1,0 +1,414 @@
+/* Kids English Go Go Go - Main Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #2c3e50;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.main-header {
+    text-align: center;
+    background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+    color: white;
+    padding: 40px 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.main-header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    animation: bounce 2s infinite;
+}
+
+.tagline {
+    font-size: 1.4rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+/* Navigation */
+.main-nav {
+    margin-bottom: 40px;
+}
+
+.nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.nav-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #2c3e50;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.nav-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.nav-card.lessons { border-color: #ff6b6b; }
+.nav-card.lessons:hover { background: #ffe5e5; }
+
+.nav-card.word-bank { border-color: #feca57; }
+.nav-card.word-bank:hover { background: #fff9e5; }
+
+.nav-card.generator { border-color: #48dbfb; }
+.nav-card.generator:hover { background: #e5f9ff; }
+
+.nav-card.print { border-color: #ff9ff3; }
+.nav-card.print:hover { background: #ffe5fc; }
+
+.nav-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.nav-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.nav-card p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+/* Content Sections */
+.content-section {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Lesson Grid */
+.lesson-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.lesson-card {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.lesson-card:hover {
+    transform: translateY(-3px);
+}
+
+.lesson-card.completed {
+    background: linear-gradient(135deg, #d4edda, #c3e6cb);
+    border: 2px solid #28a745;
+}
+
+.lesson-card.new {
+    background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+    border: 2px solid #ffc107;
+}
+
+.lesson-number {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: #ff6b6b;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.lesson-card h3 {
+    font-size: 1.8rem;
+    margin: 20px 0 10px 0;
+    color: #2c3e50;
+}
+
+.lesson-btn {
+    display: inline-block;
+    background: #ff6b6b;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.lesson-btn:hover {
+    background: #ff5252;
+}
+
+/* Word Bank */
+.word-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.category {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.word-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.word-tag {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.word-tag.known {
+    background: #d4edda;
+    color: #155724;
+    border: 2px solid #28a745;
+}
+
+.word-tag.new {
+    background: #fff3cd;
+    color: #856404;
+    border: 2px solid #ffc107;
+}
+
+/* Daily Lesson */
+.daily-lesson {
+    display: grid;
+    gap: 30px;
+}
+
+.lesson-part {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.lesson-part h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.lesson-part h4 {
+    color: #ff6b6b;
+    margin-bottom: 15px;
+}
+
+.simple-instructions {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.simple-instructions li {
+    margin-bottom: 10px;
+}
+
+.simple-instructions strong {
+    color: #ff6b6b;
+}
+
+/* Daily Words */
+.daily-words {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.word-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.word-card:hover {
+    transform: scale(1.05);
+}
+
+.word-emoji {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.word-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.word-action {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Practice Sentences */
+.practice-sentences {
+    display: grid;
+    gap: 20px;
+}
+
+.sentence {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.english {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.action {
+    font-size: 1.2rem;
+    color: #ff6b6b;
+    font-style: italic;
+}
+
+/* Print Materials */
+.print-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.print-card {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+}
+
+.print-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.print-btn {
+    background: #48dbfb;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 15px;
+}
+
+.print-btn:hover {
+    background: #17a2b8;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 1.1rem;
+    }
+    
+    .nav-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .lesson-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .word-categories {
+        grid-template-columns: 1fr;
+    }
+    
+    .daily-words {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    .print-options {
+        grid-template-columns: 1fr;
+    }
+}

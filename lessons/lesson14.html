@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 14: Colorful World! 🌈</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        /* Lesson-specific styles */
+        .story-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .story-page {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .story-page h2 {
+            font-size: 2.5rem;
+            color: #673ab7;
+            margin-bottom: 20px;
+        }
+        
+        .story-emoji {
+            font-size: 6rem;
+            margin: 20px 0;
+        }
+        
+        .story-text {
+            font-size: 1.8rem;
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .instruction-text {
+            font-size: 1.3rem;
+            color: #673ab7;
+            font-style: italic;
+            background: #ede7f6;
+            padding: 10px;
+            border-radius: 10px;
+            border-left: 4px solid #673ab7;
+        }
+        
+        .sentence-practice {
+            background: #ede7f6;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .sentence-practice h3 {
+            color: #673ab7;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .vocabulary-section {
+            background: #f8f9fa;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .vocabulary-section h3 {
+            color: #673ab7;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .vocab-words {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .vocab-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .vocab-emoji {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        .vocab-word {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .home-btn {
+            display: inline-block;
+            background: #48dbfb;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 30px;
+            transition: background 0.3s ease;
+        }
+        
+        .home-btn:hover {
+            background: #17a2b8;
+        }
+        
+        .pronunciation-icon {
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-left: 8px;
+            opacity: 0.7;
+            transition: opacity 0.2s ease;
+        }
+        
+        .pronunciation-icon:hover {
+            opacity: 1;
+        }
+        
+        .word-practice {
+            background: #e8f5e8;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .word-practice h3 {
+            color: #27ae60;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .words-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .word-item {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .word-item .word {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .learning-game-btn {
+            display: inline-block;
+            background: #ff9800;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 10px;
+            transition: background 0.3s ease;
+        }
+        
+        .learning-game-btn:hover {
+            background: #f57c00;
+        }
+    </style>
+</head>
+<body>
+    <div class="story-container">
+
+        <div class="story-page">
+            <h2>🌈 Colorful World! - Page 1</h2>
+            <div class="story-emoji">🔴</div>
+            <p class="story-text">
+                It is red! <span class="pronunciation-icon" onclick="pronounce('It is red')">🔊</span>
+            </p>
+            <p class="instruction-text">*Point to something red around you like an apple or strawberry*</p>
+        </div>
+
+        <div class="story-page">
+            <h2>🌈 Colorful World! - Page 2</h2>
+            <div class="story-emoji">🔵</div>
+            <p class="story-text">
+                It is blue! <span class="pronunciation-icon" onclick="pronounce('It is blue')">🔊</span>
+            </p>
+            <p class="instruction-text">*Look up at the blue sky and point*</p>
+        </div>
+
+        <div class="story-page">
+            <h2>🌈 Colorful World! - Page 3</h2>
+            <div class="story-emoji">🟢</div>
+            <p class="story-text">
+                It is green! <span class="pronunciation-icon" onclick="pronounce('It is green')">🔊</span>
+            </p>
+            <p class="instruction-text">*Point to grass or leaves on trees*</p>
+        </div>
+
+        <div class="story-page">
+            <h2>🌈 Colorful World! - Page 4</h2>
+            <div class="story-emoji">🟡</div>
+            <p class="story-text">
+                It is yellow! <span class="pronunciation-icon" onclick="pronounce('It is yellow')">🔊</span>
+            </p>
+            <p class="instruction-text">*Point to the bright yellow sun*</p>
+        </div>
+
+        <div class="story-page">
+            <h2>🌈 Colorful World! - Page 5</h2>
+            <div class="story-emoji">⚫</div>
+            <p class="story-text">
+                It is black! <span class="pronunciation-icon" onclick="pronounce('It is black')">🔊</span>
+            </p>
+            <p class="instruction-text">*Point to something black like your shoes*</p>
+        </div>
+
+        <div class="story-page">
+            <h2>🌈 Colorful World! - Page 6</h2>
+            <div class="story-emoji">⚪</div>
+            <p class="story-text">
+                It is white! <span class="pronunciation-icon" onclick="pronounce('It is white')">🔊</span>
+            </p>
+            <p class="instruction-text">*Point to something white like clouds or paper*</p>
+        </div>
+
+        <div class="sentence-practice">
+            <h3>🎯 Practice the Pattern: "It is..."</h3>
+            <p style="font-size: 1.4rem; margin: 15px 0;">
+                <strong>Try saying:</strong><br>
+                • It is big <span class="pronunciation-icon" onclick="pronounce('It is big')">🔊</span><br>
+                • It is small <span class="pronunciation-icon" onclick="pronounce('It is small')">🔊</span><br>
+                • It is nice <span class="pronunciation-icon" onclick="pronounce('It is nice')">🔊</span>
+            </p>
+        </div>
+
+        <div class="word-practice">
+            <h3>🔤 Practice Individual Words</h3>
+            <div class="words-grid">
+                <div class="word-item">
+                    <span class="word">it</span> <span class="pronunciation-icon" onclick="pronounce('it')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">is</span> <span class="pronunciation-icon" onclick="pronounce('is')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">red</span> <span class="pronunciation-icon" onclick="pronounce('red')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">blue</span> <span class="pronunciation-icon" onclick="pronounce('blue')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">green</span> <span class="pronunciation-icon" onclick="pronounce('green')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">yellow</span> <span class="pronunciation-icon" onclick="pronounce('yellow')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">black</span> <span class="pronunciation-icon" onclick="pronounce('black')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">white</span> <span class="pronunciation-icon" onclick="pronounce('white')">🔊</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="vocabulary-section">
+            <h3>🌟 New Words!</h3>
+            <div class="vocab-words">
+                <div class="vocab-card">
+                    <div class="vocab-emoji">🔴</div>
+                    <div class="vocab-word">red</div>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-emoji">🔵</div>
+                    <div class="vocab-word">blue</div>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-emoji">🟢</div>
+                    <div class="vocab-word">green</div>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-emoji">🟡</div>
+                    <div class="vocab-word">yellow</div>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-emoji">⚫</div>
+                    <div class="vocab-word">black</div>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-emoji">⚪</div>
+                    <div class="vocab-word">white</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="../learning-game.html" class="learning-game-btn">🎮 Play Learning Game</a>
+            <a href="../index.html" class="home-btn">🏠 Back to Main Page</a>
+        </div>
+    </div>
+
+    <script src="../scripts/interactive.js"></script>
+</body>
+</html>

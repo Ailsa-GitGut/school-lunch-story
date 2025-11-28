@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 13: My Family! 👨‍👩‍👧‍👦</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        /* Lesson-specific styles */
+        .story-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .story-page {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .story-page h2 {
+            font-size: 2.5rem;
+            color: #ff5722;
+            margin-bottom: 20px;
+        }
+        
+        .story-emoji {
+            font-size: 6rem;
+            margin: 20px 0;
+        }
+        
+        .story-text {
+            font-size: 1.8rem;
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .instruction-text {
+            font-size: 1.3rem;
+            color: #ff5722;
+            font-style: italic;
+            background: #fff3e0;
+            padding: 10px;
+            border-radius: 10px;
+            border-left: 4px solid #ff5722;
+        }
+        
+        .sentence-practice {
+            background: #fff3e0;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .sentence-practice h3 {
+            color: #ff5722;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .vocabulary-section {
+            background: #f8f9fa;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .vocabulary-section h3 {
+            color: #ff5722;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .vocab-words {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .vocab-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .vocab-emoji {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        .vocab-word {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .home-btn {
+            display: inline-block;
+            background: #48dbfb;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 30px;
+            transition: background 0.3s ease;
+        }
+        
+        .home-btn:hover {
+            background: #17a2b8;
+        }
+        
+        .pronunciation-icon {
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-left: 8px;
+            opacity: 0.7;
+            transition: opacity 0.2s ease;
+        }
+        
+        .pronunciation-icon:hover {
+            opacity: 1;
+        }
+        
+        .word-practice {
+            background: #e8f5e8;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .word-practice h3 {
+            color: #27ae60;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .words-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .word-item {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .word-item .word {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="story-container">
+
+        <div class="story-page">
+            <h2>👨‍👩‍👧‍👦 My Family! - Page 1</h2>
+            <div class="story-emoji">👩</div>
+            <p class="story-text">
+                This is my mom! <span class="pronunciation-icon" onclick="pronounce('This is my mom')">🔊</span>
+            </p>
+            <p class="instruction-text">*Give mom a big hug and say "I love you, mom!"*</p>
+        </div>
+
+        <div class="story-page">
+            <h2>👨‍👩‍👧‍👦 My Family! - Page 2</h2>
+            <div class="story-emoji">👨</div>
+            <p class="story-text">
+                This is my dad! <span class="pronunciation-icon" onclick="pronounce('This is my dad')">🔊</span>
+            </p>
+            <p class="instruction-text">*Give dad a big hug and say "I love you, dad!"*</p>
+        </div>
+
+        <div class="story-page">
+            <h2>👨‍👩‍👧‍👦 My Family! - Page 3</h2>
+            <div class="story-emoji">👦</div>
+            <p class="story-text">
+                This is my brother! <span class="pronunciation-icon" onclick="pronounce('This is my brother')">🔊</span>
+            </p>
+            <p class="instruction-text">*Wave at your brother and smile*</p>
+        </div>
+
+        <div class="story-page">
+            <h2>👨‍👩‍👧‍👦 My Family! - Page 4</h2>
+            <div class="story-emoji">👧</div>
+            <p class="story-text">
+                This is my sister! <span class="pronunciation-icon" onclick="pronounce('This is my sister')">🔊</span>
+            </p>
+            <p class="instruction-text">*Give your sister a gentle high-five*</p>
+        </div>
+
+        <div class="story-page">
+            <h2>👨‍👩‍👧‍👦 My Family! - Page 5</h2>
+            <div class="story-emoji">❤️</div>
+            <p class="story-text">
+                I love my family! <span class="pronunciation-icon" onclick="pronounce('I love my family')">🔊</span>
+            </p>
+            <p class="instruction-text">*Put your hand over your heart and smile big*</p>
+        </div>
+
+        <div class="story-page">
+            <h2>👨‍👩‍👧‍👦 My Family! - Page 6</h2>
+            <div class="story-emoji">🏠</div>
+            <p class="story-text">
+                My family is happy! <span class="pronunciation-icon" onclick="pronounce('My family is happy')">🔊</span>
+            </p>
+            <p class="instruction-text">*Jump up and clap your hands with joy!*</p>
+        </div>
+
+        <div class="sentence-practice">
+            <h3>🎯 Practice the Pattern: "This is my..."</h3>
+            <p style="font-size: 1.4rem; margin: 15px 0;">
+                <strong>Try saying:</strong><br>
+                • This is my friend <span class="pronunciation-icon" onclick="pronounce('This is my friend')">🔊</span><br>
+                • This is my teacher <span class="pronunciation-icon" onclick="pronounce('This is my teacher')">🔊</span><br>
+                • This is my home <span class="pronunciation-icon" onclick="pronounce('This is my home')">🔊</span>
+            </p>
+        </div>
+
+        <div class="word-practice">
+            <h3>🔤 Practice Individual Words</h3>
+            <div class="words-grid">
+                <div class="word-item">
+                    <span class="word">this</span> <span class="pronunciation-icon" onclick="pronounce('this')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">is</span> <span class="pronunciation-icon" onclick="pronounce('is')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">my</span> <span class="pronunciation-icon" onclick="pronounce('my')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">mom</span> <span class="pronunciation-icon" onclick="pronounce('mom')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">dad</span> <span class="pronunciation-icon" onclick="pronounce('dad')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">brother</span> <span class="pronunciation-icon" onclick="pronounce('brother')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">sister</span> <span class="pronunciation-icon" onclick="pronounce('sister')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">family</span> <span class="pronunciation-icon" onclick="pronounce('family')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">love</span> <span class="pronunciation-icon" onclick="pronounce('love')">🔊</span>
+                </div>
+                <div class="word-item">
+                    <span class="word">happy</span> <span class="pronunciation-icon" onclick="pronounce('happy')">🔊</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="vocabulary-section">
+            <h3>🌟 New Words!</h3>
+            <div class="vocab-words">
+                <div class="vocab-card">
+                    <div class="vocab-emoji">👩</div>
+                    <div class="vocab-word">mom</div>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-emoji">👨</div>
+                    <div class="vocab-word">dad</div>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-emoji">👦</div>
+                    <div class="vocab-word">brother</div>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-emoji">👧</div>
+                    <div class="vocab-word">sister</div>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-emoji">👨‍👩‍👧‍👦</div>
+                    <div class="vocab-word">family</div>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-emoji">❤️</div>
+                    <div class="vocab-word">love</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="../index.html" class="home-btn">🏠 Back to Main Page</a>
+        </div>
+    </div>
+
+    <script src="../scripts/interactive.js"></script>
+</body>
+</html>
